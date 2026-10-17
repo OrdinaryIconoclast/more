@@ -1,0 +1,259 @@
+<!doctype html>
+<!--
+  Root page for https://ordinaryiconoclast.github.io/more/
+  One self-contained HTML5 file: no frameworks, no external fonts or scripts.
+  Copy any block below into a new page and delete what you don't need.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>More</title>
+<meta name="description" content="Pages and projects by OrdinaryIconoclast.">
+<!-- Optional: emoji favicon, no file needed -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰️</text></svg>">
+<style>
+  /* ---------- Colors: edit these to restyle everything ---------- */
+  :root { --bg:#fbfaf7; --fg:#1d2733; --muted:#5d6670; --accent:#d9702a; --navy:#16324f;
+          --rule:#e4e0d8; --card:#fff; --code:#f1eee8; --mark:#ffe7a8; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#14181d; --fg:#e8e6e1; --muted:#a3a9b0; --accent:#f08a43; --navy:#9cc0e6;
+            --rule:#2b323a; --card:#1b2026; --code:#22282f; --mark:#6b5313; }
+  }
+
+  /* ---------- Base ---------- */
+  * { box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width:680px; margin:0 auto; padding:28px 18px 56px; }
+  a { color:var(--accent); text-underline-offset:3px; }
+
+  /* ---------- Markdown-style headings ---------- */
+  h1, h2, h3, h4 { color:var(--navy); line-height:1.25; }
+  h1 { font-size:2rem; margin:0 0 6px; }
+  h2 { font-size:1.3rem; margin:40px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--rule); }
+  h3 { font-size:1.1rem; margin:26px 0 8px; }
+  h4 { font-size:1rem; margin:20px 0 6px; }
+  h2::before { content:"## "; } h3::before { content:"### "; } h4::before { content:"#### "; }
+  h2::before, h3::before, h4::before { color:var(--accent); font:400 .9em ui-monospace, Menlo, Consolas, monospace; }
+
+  /* ---------- Text ---------- */
+  .lead { color:var(--muted); font-size:1.1rem; margin-top:0; }
+  small, .muted { color:var(--muted); }
+  mark { background:var(--mark); color:inherit; padding:0 .15em; border-radius:3px; }
+  code, kbd, pre { font-family:ui-monospace, Menlo, Consolas, monospace; font-size:.9em; }
+  code { background:var(--code); padding:.1em .35em; border-radius:4px; }
+  kbd { border:1px solid var(--rule); border-bottom-width:2px; border-radius:4px; padding:.05em .4em; background:var(--card); }
+  pre { background:var(--code); padding:14px 16px; border-radius:8px; overflow-x:auto; line-height:1.45; }
+  pre code { background:none; padding:0; }
+  abbr[title] { text-decoration:underline dotted; cursor:help; }
+  hr { border:0; border-top:1px solid var(--rule); margin:32px 0; }
+
+  /* ---------- Lists ---------- */
+  ul, ol { padding-left:1.3em; } li { margin:4px 0; } li::marker { color:var(--accent); }
+  dt { font-weight:700; color:var(--navy); margin-top:8px; } dd { margin:0 0 0 1.2em; }
+
+  /* ---------- Blocks ---------- */
+  blockquote { margin:16px 0; padding:4px 16px; border-left:4px solid var(--accent); color:var(--muted); }
+  blockquote p { margin:8px 0; } blockquote footer { font-size:.9rem; margin-bottom:8px; }
+  .card { background:var(--card); border:1px solid var(--rule); border-left:4px solid var(--accent);
+          border-radius:8px; padding:14px 16px; margin:16px 0; }
+  details { background:var(--card); border:1px solid var(--rule); border-radius:8px; padding:10px 14px; margin:12px 0; }
+  summary { cursor:pointer; color:var(--accent); font-weight:600; }
+  .btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700;
+         padding:12px 18px; border-radius:10px; }
+  .btn.alt { background:transparent; color:var(--accent); border:2px solid var(--accent); }
+
+  /* ---------- Tables (scroll sideways on small screens) ---------- */
+  .table-wrap { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; font-size:.95rem; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+  th { color:var(--navy); }
+
+  /* ---------- Media: images & video never overflow the screen ---------- */
+  img, video, iframe { max-width:100%; height:auto; display:block; }
+  figure { margin:18px 0; }
+  figure img, figure video { border-radius:8px; width:100%; }
+  figcaption { color:var(--muted); font-size:.9rem; margin-top:6px; text-align:center; }
+  .avatar { width:120px; height:120px; object-fit:cover; object-position:50% 30%; border-radius:50%; border:3px solid var(--accent); }
+  audio { width:100%; }
+
+  /* ---------- Forms ---------- */
+  label { display:block; font-weight:600; margin:12px 0 4px; }
+  input, textarea, select { width:100%; font:inherit; color:inherit; background:var(--card);
+         border:1px solid var(--rule); border-radius:8px; padding:10px 12px; }
+  input[type=checkbox] { width:auto; }
+
+  main > footer { margin-top:48px; text-align:center; color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+
+<!-- ======================= HEADER ======================= -->
+<header>
+  <h1>More</h1>
+  <p class="lead">A small collection of pages. Start with the one you came for:</p>
+  <p><a class="btn" href="steamboat/">Mike · Room Wanted in Steamboat →</a></p>
+</header>
+
+<hr>
+<p class="muted"><em>Everything below is a style reference: copy any block into a new page.</em></p>
+
+
+<!-- ======================= HEADINGS ======================= -->
+<h2>Headings</h2>
+<h3>Third-level heading</h3>
+<h4>Fourth-level heading</h4>
+
+
+<!-- ======================= TEXT ======================= -->
+<h2>Text formatting</h2>
+<p>A normal paragraph with <strong>bold</strong>, <em>italic</em>, <strong><em>both</em></strong>,
+<mark>highlighted</mark>, <del>deleted</del>, <ins>inserted</ins>, <small>small print</small>,
+H<sub>2</sub>O, x<sup>2</sup>, <code>inline code</code>, a keyboard key <kbd>Ctrl</kbd> + <kbd>C</kbd>,
+and an <abbr title="Steamboat Springs Transit">SST</abbr> abbreviation.</p>
+<p>Links: <a href="steamboat/">relative link</a> ·
+<a href="https://github.com/OrdinaryIconoclast" target="_blank" rel="noopener">external (new tab)</a> ·
+<a href="tel:+19704392669">phone</a> · <a href="sms:+19704392669">text</a> ·
+<a href="#video">jump to the video section</a></p>
+<p>Line one<br>Line two after a line break.</p>
+
+
+<!-- ======================= LISTS ======================= -->
+<h2>Lists</h2>
+<ul>
+  <li>Unordered item</li>
+  <li>Item with a nested list
+    <ul><li>Nested item</li><li>Another nested item</li></ul>
+  </li>
+</ul>
+<ol>
+  <li>Ordered item</li>
+  <li>Second item</li>
+</ol>
+<dl>
+  <dt>Term</dt><dd>Definition of the term.</dd>
+  <dt>Another term</dt><dd>Its definition.</dd>
+</dl>
+
+
+<!-- ======================= BLOCKS ======================= -->
+<h2>Blocks</h2>
+<blockquote>
+  <p>A blockquote, for pulling out a quote or a note.</p>
+  <footer>— Someone</footer>
+</blockquote>
+
+<div class="card"><strong>Card / callout:</strong> a highlighted box for key info.</div>
+
+<details>
+  <summary>Click to expand (collapsible section)</summary>
+  <p>Hidden content goes here. Nest another <code>&lt;details&gt;</code> inside for nested collapses.</p>
+  <details><summary>Nested collapse</summary><p>Even more detail.</p></details>
+</details>
+
+<pre><code>&lt;!-- A code block. Escape &lt; as &amp;lt; and &gt; as &amp;gt; --&gt;
+&lt;p&gt;Hello world&lt;/p&gt;</code></pre>
+
+<p><a class="btn" href="#">Button link</a> <a class="btn alt" href="#">Outline button</a></p>
+
+
+<!-- ======================= TABLE ======================= -->
+<h2>Table</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Season</th><th>Activity</th><th>Level</th></tr></thead>
+  <tbody>
+    <tr><td>Winter</td><td>Skiing</td><td>Dynamic on-piste</td></tr>
+    <tr><td>Summer</td><td>Whitewater</td><td>Class II</td></tr>
+  </tbody>
+</table>
+</div>
+
+
+<!-- ======================= IMAGES ======================= -->
+<h2>Images</h2>
+<!-- Simple image. Always set alt text; loading="lazy" delays offscreen images. -->
+<h3>Basic image</h3>
+<img src="steamboat/headshot.jpg" alt="Mike on a trail among fall trees" width="360" height="450" loading="lazy">
+
+<!-- Image with a caption -->
+<h3>Image with caption</h3>
+<figure>
+  <img src="steamboat/headshot.jpg" alt="Mike on a trail among fall trees" loading="lazy">
+  <figcaption>A caption goes here.</figcaption>
+</figure>
+
+<!-- Round avatar, using the .avatar class -->
+<h3>Round avatar</h3>
+<img class="avatar" src="steamboat/headshot.jpg" alt="Mike">
+
+<!-- Responsive image: browser picks the best file for screen size/format.
+     Uncomment a <source> line only once that file exists: a missing source shows a broken image. -->
+<h3>Responsive image (optional extra formats)</h3>
+<picture>
+  <!-- <source srcset="images/photo.avif" type="image/avif"> -->
+  <!-- <source srcset="images/photo.webp" type="image/webp"> -->
+  <img src="steamboat/headshot.jpg" alt="Mike on a trail among fall trees" loading="lazy">
+</picture>
+
+<!-- Image that links somewhere -->
+<h3>Clickable image</h3>
+<a href="steamboat/"><img class="avatar" src="steamboat/headshot.jpg" alt="Go to Mike's Steamboat page"></a>
+
+
+<!-- ======================= VIDEO ======================= -->
+<h2 id="video">Video</h2>
+<!-- Put video files in the repo (e.g. a "media" folder). Keep files under ~50 MB;
+     GitHub rejects single files over 100 MB. MP4 (H.264) plays everywhere. -->
+<h3>Video with controls</h3>
+<figure>
+  <video controls preload="metadata" playsinline poster="steamboat/headshot.jpg">
+    <source src="media/example.webm" type="video/webm">
+    <source src="media/example.mp4" type="video/mp4">
+    <track kind="captions" src="media/example.vtt" srclang="en" label="English">
+    Your browser can't play this video. <a href="media/example.mp4">Download it instead.</a>
+  </video>
+  <figcaption>Replace <code>media/example.mp4</code> with your file.</figcaption>
+</figure>
+
+<!-- Silent looping clip, like a GIF (must be muted to autoplay) -->
+<h3>Autoplay loop (GIF-style)</h3>
+<figure>
+  <video autoplay muted loop playsinline src="media/loop.mp4"></video>
+  <figcaption>Empty until <code>media/loop.mp4</code> exists.</figcaption>
+</figure>
+
+
+<!-- ======================= AUDIO ======================= -->
+<h2>Audio</h2>
+<audio controls preload="none">
+  <source src="media/example.mp3" type="audio/mpeg">
+  Your browser can't play this audio.
+</audio>
+
+
+<!-- ======================= FORM (display only) ======================= -->
+<h2>Form elements</h2>
+<!-- GitHub Pages is static, so forms can't submit anywhere by themselves.
+     A mailto: action opens the visitor's email app instead. -->
+<form action="mailto:you@example.com" method="post" enctype="text/plain">
+  <label for="name">Name</label>
+  <input id="name" name="name" type="text" placeholder="Your name">
+  <label for="msg">Message</label>
+  <textarea id="msg" name="message" rows="3" placeholder="Say hi"></textarea>
+  <label for="pick">Choose one</label>
+  <select id="pick" name="pick"><option>Option A</option><option>Option B</option></select>
+  <label><input type="checkbox" name="ok"> A checkbox</label>
+  <p><button class="btn" type="submit" style="border:0;font:inherit;font-weight:700;cursor:pointer">Send</button></p>
+</form>
+
+<footer>
+  <p>Hosted on GitHub Pages · <a href="#">Back to top ↑</a></p>
+</footer>
+
+</main>
+</body>
+</html>
