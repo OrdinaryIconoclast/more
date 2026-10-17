@@ -3,114 +3,76 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mike · Room Wanted in Steamboat</title>
-<meta name="description" content="Full-time, year-round Steamboat local seeking a private room or studio. Quiet, clean, considerate, and handy around the house.">
-<meta property="og:title" content="Mike · Room Wanted in Steamboat">
-<meta property="og:description" content="Full-time, year-round local seeking a private room or studio, up to $1,500/mo.">
+<title>Room Wanted · Mike</title>
+<meta name="description" content="Private room or studio · up to $1,500/mo. In or near Steamboat · Move-in ASAP (by Nov 1).">
+<meta property="og:title" content="Room Wanted · Mike">
+<meta property="og:description" content="Private room or studio · up to $1,500/mo. In or near Steamboat · Move-in ASAP (by Nov 1).">
 <meta property="og:image" content="https://ordinaryiconoclast.github.io/more/steamboat/headshot.jpg">
 <meta property="og:url" content="https://ordinaryiconoclast.github.io/more/steamboat/">
 <style>
-  :root { --bg:#fbfaf7; --fg:#1d2733; --muted:#5d6670; --accent:#d9702a; --navy:#16324f; --rule:#e4e0d8; --card:#fff; }
+  :root { --bg:#fbfaf7; --fg:#16324f; --muted:#555; --accent:#e07a2e; --navy:#16324f; --peach:#f6c9a3; --rule:#e07a2e; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#14181d; --fg:#e8e6e1; --muted:#a3a9b0; --accent:#f08a43; --navy:#9cc0e6; --rule:#2b323a; --card:#1b2026; }
+    :root { --bg:#14181d; --fg:#dbe6f2; --muted:#a3a9b0; --accent:#f08a43; }
   }
   * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--fg);
-         font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-  main { max-width:640px; margin:0 auto; padding:28px 18px 56px; }
-  header { text-align:center; }
-  header img { width:150px; height:150px; object-fit:cover; object-position:50% 30%;
-               border-radius:50%; border:3px solid var(--accent); }
-  h1 { font-size:1.9rem; line-height:1.2; margin:14px 0 4px; color:var(--navy); }
-  .tag { color:var(--muted); margin:0; }
-  h2 { font-size:1.15rem; color:var(--navy); margin:34px 0 8px; padding-bottom:6px;
-       border-bottom:1px solid var(--rule); }
-  h2::before { content:"## "; color:var(--accent); font-family:ui-monospace, Menlo, Consolas, monospace; font-weight:400; }
-  ul { padding-left:1.2em; margin:8px 0; }
-  li { margin:4px 0; }
-  li::marker { color:var(--accent); }
-  strong { color:var(--navy); }
-  .ask { background:var(--card); border:1px solid var(--rule); border-left:4px solid var(--accent);
-         border-radius:8px; padding:14px 16px; margin-top:22px; }
-  .ask p { margin:4px 0; }
-  .cta { display:block; text-align:center; background:var(--accent); color:#fff; text-decoration:none;
-         font-weight:700; font-size:1.15rem; padding:14px; border-radius:10px; margin:18px 0 6px; }
-  .cta.alt { background:transparent; color:var(--accent); border:2px solid var(--accent); }
-  .small { color:var(--muted); font-size:.92rem; }
-  details { margin:6px 0; }
-  summary { cursor:pointer; color:var(--accent); font-weight:600; }
-  .qr { text-align:center; margin-top:40px; }
-  .qr svg { width:180px; height:180px; background:#fff; padding:10px; border-radius:10px; }
-  footer { text-align:center; margin-top:10px; }
+         font:18px/1.45 Helvetica, Arial, -apple-system, BlinkMacSystemFont, sans-serif; }
+  .band { background:var(--navy); color:#fff; text-align:center; padding:26px 16px 22px; }
+  .band h1 { margin:0; font-size:clamp(2rem, 10.5vw, 4rem); white-space:nowrap; line-height:1; letter-spacing:.01em; font-weight:800; }
+  .band p { margin:12px 0 0; color:var(--peach); font-weight:700; font-size:clamp(1.05rem, 4.6vw, 1.5rem); }
+  main { max-width:640px; margin:0 auto; padding:24px 18px 48px; }
+  .intro { display:flex; gap:22px; align-items:flex-start; }
+  .who { flex:0 0 auto; text-align:center; }
+  .who img { width:170px; height:210px; object-fit:cover; border-radius:10px; border:3px solid var(--navy); display:block; }
+  @media (prefers-color-scheme: dark) { .who img { border-color:var(--accent); } }
+  .who h2 { margin:10px 0 0; font-size:1.6rem; color:var(--fg); }
+  ul { list-style:none; margin:0; padding:0; flex:1; }
+  li { position:relative; padding-left:22px; margin:0 0 12px; font-weight:700; font-size:1.15rem; line-height:1.25; }
+  li::before { content:""; position:absolute; left:2px; top:.42em; width:11px; height:11px; border-radius:50%; background:var(--accent); }
+  @media (max-width:520px) {
+    .intro { flex-direction:column; align-items:center; }
+    ul { width:100%; margin-top:6px; }
+  }
+  hr { border:0; border-top:3px solid var(--rule); margin:22px 0 18px; }
+  .where { text-align:center; font-weight:700; font-size:1.2rem; margin:0; }
+  .call { display:block; text-align:center; color:var(--accent); font-weight:800; text-decoration:none;
+          font-size:clamp(1.35rem, 6.4vw, 2rem); margin:10px 0 6px; }
+  .fine { text-align:center; font-style:italic; color:var(--muted); font-size:.95rem; margin:0; }
+  .qr { text-align:center; margin-top:36px; }
+  .qr svg { width:170px; height:170px; background:#fff; padding:10px; border-radius:10px; }
+  .qr p { color:var(--muted); font-size:.85rem; margin:6px 0 0; }
 </style>
 </head>
 <body>
-<main>
 
-<header>
-  <img src="headshot.jpg" alt="Mike, smiling on a trail among yellow fall trees">
-  <h1>Hi, I'm Mike</h1>
-  <p class="tag">Year-round Steamboat local · looking for a place to live</p>
-</header>
-
-<div class="ask">
-  <p><strong>Seeking:</strong> a private room or studio in or near Steamboat</p>
-  <p><strong>Budget:</strong> up to $1,500/month</p>
-  <p><strong>Move-in:</strong> ASAP, ideally by November 1</p>
-  <p><strong>Deposit:</strong> I'm hoping to pay it in installments over a few months</p>
+<div class="band">
+  <h1>ROOM WANTED</h1>
+  <p>Private room or studio &nbsp;·&nbsp; up to $1,500/mo</p>
 </div>
 
-<a class="cta" href="tel:+19704392669">Call or text 970-439-2669</a>
-<a class="cta alt" href="sms:+19704392669">Send a text</a>
+<main>
+  <div class="intro">
+    <div class="who">
+      <img src="headshot.jpg" alt="Mike">
+      <h2>Hi, I'm Mike!</h2>
+    </div>
+    <ul>
+      <li>Full-time, year-round job with benefits</li>
+      <li>Work evenings, so I'm rarely home</li>
+      <li>Quiet, clean &amp; considerate</li>
+      <li>No overnight guests</li>
+      <li>No parking needed</li>
+      <li>10 months in Steamboat, 24 years in Colorado</li>
+    </ul>
+  </div>
 
-<h2>About me</h2>
-<ul>
-  <li>Colorado resident for 24 years; in Steamboat for 10 months</li>
-  <li>Full-time, year-round job with benefits at Steamboat Ski Corp</li>
-  <li>I work 4pm to midnight, Monday through Friday</li>
-  <li>No parking spot needed</li>
-</ul>
+  <hr>
+  <p class="where">In or near Steamboat &nbsp;·&nbsp; Move-in ASAP (by Nov 1)</p>
+  <a class="call" href="tel:+19704392669">Call or text Mike: <span style="white-space:nowrap">970-439-2669</span></a>
+  <p class="fine">References available &nbsp;·&nbsp; Hoping to pay deposit in installments</p>
 
-<h2>At home</h2>
-<ul>
-  <li>Mostly I'm sleeping, showering, or cooking</li>
-  <li>Small footprint: nearly everything I own is in storage</li>
-  <li>Clean but not obsessive; I leave shared spaces ready for the next person</li>
-  <li>Quiet and low-key; no TV or music out loud</li>
-  <li>No overnight guests; visitors stay in their own rental</li>
-  <li>Social and easy to talk to, so if something comes up, we'll work it out</li>
-</ul>
-
-<h2>Handy to have around</h2>
-<p>I'm open to helping around the house in exchange for reduced rent. I'm available weekday mornings, early afternoons, and weekends.</p>
-<ul>
-  <li><strong>On-site caretaker</strong> for a VRBO property</li>
-  <li><strong>Ranch hand</strong> at an equestrian school in Nederland, where I kept 12 horses cared for on my own through two weeks of back-to-back storms totaling over 3 feet</li>
-  <li><strong>Lead adaptive snowsports instructor</strong> at Ignite Adaptive Sports at Eldora; 2019 Rookie of the Year and a Disabled Sports USA scholarship to Ski Spectacular</li>
-  <li>Comfortable with power and shop tools, ride-on equipment, and snow removal by Bobcat, snowblower, or shovel</li>
-  <li>Groceries, errands, trash, yard work, and general maintenance</li>
-  <li>Clean driving record and current license</li>
-</ul>
-
-<h2>Interests</h2>
-<ul>
-  <li><strong>Year-round:</strong> live music, hot springs, karaoke</li>
-  <li><strong>Winter:</strong> skiing, ski culture, local competitions</li>
-  <li><strong>Summer:</strong> hiking, biking, floating, paddling, camping</li>
-  <li><strong>Hobbies:</strong> building lights and computers, home tech projects</li>
-</ul>
-<details>
-  <summary>More about my skiing and summer pace</summary>
-  <p>I'm a dynamic on-piste skier who's just happy to be on the mountain, and I'll gladly spend all day on comfortable terrain with beginners. In summer I'm a capable novice: good for a 6-mile loop, class II whitewater, and green downhill runs.</p>
-</details>
-
-<h2>References</h2>
-<p>Available from Ignite Adaptive Sports and from past clients, property owners, and managers. Just ask.</p>
-
-<a class="cta" href="tel:+19704392669">Call or text 970-439-2669</a>
-
-<div class="qr">
-  <svg role="img" aria-label="QR code for this page" viewBox="0 0 90.7087 90.7087" preserveAspectRatio="xMinYMin meet" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <div class="qr">
+    <svg role="img" aria-label="QR code for this page" viewBox="0 0 90.7087 90.7087" preserveAspectRatio="xMinYMin meet" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<title>...</title>
 	<desc>...</desc>
 	<clipPath id="clip">
@@ -422,9 +384,9 @@
 	</g>
 </svg>
 
-  <p class="small">Share this page: scan or visit<br>ordinaryiconoclast.github.io/more/steamboat/</p>
-</div>
-
+    <p>ordinaryiconoclast.github.io/more/steamboat/</p>
+  </div>
 </main>
+
 </body>
 </html>
