@@ -1,0 +1,73 @@
+  /* ---------- Colors: edit these to restyle everything ---------- */
+  :root { --bg:#fbfaf7; --fg:#1d2733; --muted:#5d6670; --accent:#d9702a; --navy:#16324f;
+          --rule:#e4e0d8; --card:#fff; --code:#f1eee8; --mark:#ffe7a8; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#14181d; --fg:#e8e6e1; --muted:#a3a9b0; --accent:#f08a43; --navy:#9cc0e6;
+            --rule:#2b323a; --card:#1b2026; --code:#22282f; --mark:#6b5313; }
+  }
+
+  /* ---------- Base ---------- */
+  * { box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width:680px; margin:0 auto; padding:28px 18px 56px; }
+  a { color:var(--accent); text-underline-offset:3px; }
+
+  /* ---------- Markdown-style headings ---------- */
+  h1, h2, h3, h4 { color:var(--navy); line-height:1.25; }
+  h1 { font-size:2rem; margin:0 0 6px; }
+  h2 { font-size:1.3rem; margin:40px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--rule); }
+  h3 { font-size:1.1rem; margin:26px 0 8px; }
+  h4 { font-size:1rem; margin:20px 0 6px; }
+  h2::before { content:"## "; } h3::before { content:"### "; } h4::before { content:"#### "; }
+  h2::before, h3::before, h4::before { color:var(--accent); font:400 .9em ui-monospace, Menlo, Consolas, monospace; }
+
+  /* ---------- Text ---------- */
+  .lead { color:var(--muted); font-size:1.1rem; margin-top:0; }
+  small, .muted { color:var(--muted); }
+  mark { background:var(--mark); color:inherit; padding:0 .15em; border-radius:3px; }
+  code, kbd, pre { font-family:ui-monospace, Menlo, Consolas, monospace; font-size:.9em; }
+  code { background:var(--code); padding:.1em .35em; border-radius:4px; }
+  kbd { border:1px solid var(--rule); border-bottom-width:2px; border-radius:4px; padding:.05em .4em; background:var(--card); }
+  pre { background:var(--code); padding:14px 16px; border-radius:8px; overflow-x:auto; line-height:1.45; }
+  pre code { background:none; padding:0; }
+  abbr[title] { text-decoration:underline dotted; cursor:help; }
+  hr { border:0; border-top:1px solid var(--rule); margin:32px 0; }
+
+  /* ---------- Lists ---------- */
+  ul, ol { padding-left:1.3em; } li { margin:4px 0; } li::marker { color:var(--accent); }
+  dt { font-weight:700; color:var(--navy); margin-top:8px; } dd { margin:0 0 0 1.2em; }
+
+  /* ---------- Blocks ---------- */
+  blockquote { margin:16px 0; padding:4px 16px; border-left:4px solid var(--accent); color:var(--muted); }
+  blockquote p { margin:8px 0; } blockquote footer { font-size:.9rem; margin-bottom:8px; }
+  .card { background:var(--card); border:1px solid var(--rule); border-left:4px solid var(--accent);
+          border-radius:8px; padding:14px 16px; margin:16px 0; }
+  details { background:var(--card); border:1px solid var(--rule); border-radius:8px; padding:10px 14px; margin:12px 0; }
+  summary { cursor:pointer; color:var(--accent); font-weight:600; }
+  .btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:700;
+         padding:12px 18px; border-radius:10px; }
+  .btn.alt { background:transparent; color:var(--accent); border:2px solid var(--accent); }
+
+  /* ---------- Tables (scroll sideways on small screens) ---------- */
+  .table-wrap { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; font-size:.95rem; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--rule); }
+  th { color:var(--navy); }
+
+  /* ---------- Media: images & video never overflow the screen ---------- */
+  img, video, iframe { max-width:100%; height:auto; display:block; }
+  figure { margin:18px 0; }
+  figure img, figure video { border-radius:8px; width:100%; }
+  figcaption { color:var(--muted); font-size:.9rem; margin-top:6px; text-align:center; }
+  .avatar { width:120px; height:120px; object-fit:cover; object-position:50% 30%; border-radius:50%; border:3px solid var(--accent); }
+  audio { width:100%; }
+
+  /* ---------- Forms ---------- */
+  label { display:block; font-weight:600; margin:12px 0 4px; }
+  input, textarea, select { width:100%; font:inherit; color:inherit; background:var(--card);
+         border:1px solid var(--rule); border-radius:8px; padding:10px 12px; }
+  input[type=checkbox] { width:auto; }
+
+  main > footer { margin-top:48px; text-align:center; color:var(--muted); font-size:.9rem; }
