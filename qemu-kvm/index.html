@@ -1,183 +1,30 @@
 <!doctype html>
-<!--
-  Root page for https://ordinaryiconoclast.github.io/more/
-  One self-contained HTML5 file: no frameworks, no external fonts or scripts.
-  Copy any block below into a new page and delete what you don't need.
--->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>More</title>
-<meta name="description" content="Pages and projects by OrdinaryIconoclast.">
-<!-- Optional: emoji favicon, no file needed -->
+<title>qemu-kvm · more</title>
+<meta name="description" content="qemu-kvm: notes and details.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰️</text></svg>">
 <link rel="stylesheet" href="../more.css">
+<script src="../more.js"></script>
 </head>
 <body>
+<!-- The site header and navigation are added here by more.js -->
 <main>
 
-<!-- ======================= HEADER ======================= -->
-<header>
-  <h1>More</h1>
-  <p class="lead">A small collection of pages. Start with the one you came for:</p>
-  <p><a class="btn" href="steamboat/">Mike · Room Wanted in Steamboat →</a></p>
-</header>
+<h1>qemu-kvm</h1>
+<p class="lead">A one-line description of this section.</p>
 
-<hr>
-<p class="muted"><em>Everything below is a style reference: copy any block into a new page.</em></p>
+<h2>Overview</h2>
+<p>Start writing here. Formatting, image, and video examples are in the <a href="../default.html">style guide</a>.</p>
 
-
-<!-- ======================= HEADINGS ======================= -->
-<h2>Headings</h2>
-<h3>Third-level heading</h3>
-<h4>Fourth-level heading</h4>
-
-
-<!-- ======================= TEXT ======================= -->
-<h2>Text formatting</h2>
-<p>A normal paragraph with <strong>bold</strong>, <em>italic</em>, <strong><em>both</em></strong>,
-<mark>highlighted</mark>, <del>deleted</del>, <ins>inserted</ins>, <small>small print</small>,
-H<sub>2</sub>O, x<sup>2</sup>, <code>inline code</code>, a keyboard key <kbd>Ctrl</kbd> + <kbd>C</kbd>,
-and an <abbr title="Steamboat Springs Transit">SST</abbr> abbreviation.</p>
-<p>Links: <a href="steamboat/">relative link</a> ·
-<a href="https://github.com/OrdinaryIconoclast" target="_blank" rel="noopener">external (new tab)</a> ·
-<a href="tel:+19704392669">phone</a> · <a href="sms:+19704392669">text</a> ·
-<a href="#video">jump to the video section</a></p>
-<p>Line one<br>Line two after a line break.</p>
-
-
-<!-- ======================= LISTS ======================= -->
-<h2>Lists</h2>
-<ul>
-  <li>Unordered item</li>
-  <li>Item with a nested list
-    <ul><li>Nested item</li><li>Another nested item</li></ul>
-  </li>
-</ul>
-<ol>
-  <li>Ordered item</li>
-  <li>Second item</li>
-</ol>
-<dl>
-  <dt>Term</dt><dd>Definition of the term.</dd>
-  <dt>Another term</dt><dd>Its definition.</dd>
-</dl>
-
-
-<!-- ======================= BLOCKS ======================= -->
-<h2>Blocks</h2>
-<blockquote>
-  <p>A blockquote, for pulling out a quote or a note.</p>
-  <footer>— Someone</footer>
-</blockquote>
-
-<div class="card"><strong>Card / callout:</strong> a highlighted box for key info.</div>
-
-<details>
-  <summary>Click to expand (collapsible section)</summary>
-  <p>Hidden content goes here. Nest another <code>&lt;details&gt;</code> inside for nested collapses.</p>
-  <details><summary>Nested collapse</summary><p>Even more detail.</p></details>
-</details>
-
-<pre><code>&lt;!-- A code block. Escape &lt; as &amp;lt; and &gt; as &amp;gt; --&gt;
-&lt;p&gt;Hello world&lt;/p&gt;</code></pre>
-
-<p><a class="btn" href="#">Button link</a> <a class="btn alt" href="#">Outline button</a></p>
-
-
-<!-- ======================= TABLE ======================= -->
-<h2>Table</h2>
-<div class="table-wrap">
-<table>
-  <thead><tr><th>Season</th><th>Activity</th><th>Level</th></tr></thead>
-  <tbody>
-    <tr><td>Winter</td><td>Skiing</td><td>Dynamic on-piste</td></tr>
-    <tr><td>Summer</td><td>Whitewater</td><td>Class II</td></tr>
-  </tbody>
-</table>
-</div>
-
-
-<!-- ======================= IMAGES ======================= -->
-<h2>Images</h2>
-<!-- Simple image. Always set alt text; loading="lazy" delays offscreen images. -->
-<h3>Basic image</h3>
-<img src="steamboat/headshot.jpg" alt="Mike on a trail among fall trees" width="360" height="450" loading="lazy">
-
-<!-- Image with a caption -->
-<h3>Image with caption</h3>
-<figure>
-  <img src="steamboat/headshot.jpg" alt="Mike on a trail among fall trees" loading="lazy">
-  <figcaption>A caption goes here.</figcaption>
-</figure>
-
-<!-- Round avatar, using the .avatar class -->
-<h3>Round avatar</h3>
-<img class="avatar" src="steamboat/headshot.jpg" alt="Mike">
-
-<!-- Responsive image: browser picks the best file for screen size/format.
-     Uncomment a <source> line only once that file exists: a missing source shows a broken image. -->
-<h3>Responsive image (optional extra formats)</h3>
-<picture>
-  <!-- <source srcset="images/photo.avif" type="image/avif"> -->
-  <!-- <source srcset="images/photo.webp" type="image/webp"> -->
-  <img src="steamboat/headshot.jpg" alt="Mike on a trail among fall trees" loading="lazy">
-</picture>
-
-<!-- Image that links somewhere -->
-<h3>Clickable image</h3>
-<a href="steamboat/"><img class="avatar" src="steamboat/headshot.jpg" alt="Go to Mike's Steamboat page"></a>
-
-
-<!-- ======================= VIDEO ======================= -->
-<h2 id="video">Video</h2>
-<!-- Put video files in the repo (e.g. a "media" folder). Keep files under ~50 MB;
-     GitHub rejects single files over 100 MB. MP4 (H.264) plays everywhere. -->
-<h3>Video with controls</h3>
-<figure>
-  <video controls preload="metadata" playsinline poster="steamboat/headshot.jpg">
-    <source src="media/example.webm" type="video/webm">
-    <source src="media/example.mp4" type="video/mp4">
-    <track kind="captions" src="media/example.vtt" srclang="en" label="English">
-    Your browser can't play this video. <a href="media/example.mp4">Download it instead.</a>
-  </video>
-  <figcaption>Replace <code>media/example.mp4</code> with your file.</figcaption>
-</figure>
-
-<!-- Silent looping clip, like a GIF (must be muted to autoplay) -->
-<h3>Autoplay loop (GIF-style)</h3>
-<figure>
-  <video autoplay muted loop playsinline src="media/loop.mp4"></video>
-  <figcaption>Empty until <code>media/loop.mp4</code> exists.</figcaption>
-</figure>
-
-
-<!-- ======================= AUDIO ======================= -->
-<h2>Audio</h2>
-<audio controls preload="none">
-  <source src="media/example.mp3" type="audio/mpeg">
-  Your browser can't play this audio.
-</audio>
-
-
-<!-- ======================= FORM (display only) ======================= -->
-<h2>Form elements</h2>
-<!-- GitHub Pages is static, so forms can't submit anywhere by themselves.
-     A mailto: action opens the visitor's email app instead. -->
-<form action="mailto:you@example.com" method="post" enctype="text/plain">
-  <label for="name">Name</label>
-  <input id="name" name="name" type="text" placeholder="Your name">
-  <label for="msg">Message</label>
-  <textarea id="msg" name="message" rows="3" placeholder="Say hi"></textarea>
-  <label for="pick">Choose one</label>
-  <select id="pick" name="pick"><option>Option A</option><option>Option B</option></select>
-  <label><input type="checkbox" name="ok"> A checkbox</label>
-  <p><button class="btn" type="submit" style="border:0;font:inherit;font-weight:700;cursor:pointer">Send</button></p>
-</form>
+<!-- When this section's code repository exists, delete this line and the one below the link.
+<p><a class="btn" href="https://github.com/OrdinaryIconoclast/qemu-kvm">View the code on GitHub →</a></p>
+-->
 
 <footer>
-  <p>Hosted on GitHub Pages · <a href="#">Back to top ↑</a></p>
+  <p><a href="#">Back to top ↑</a></p>
 </footer>
 
 </main>
