@@ -9,6 +9,10 @@
   The navigation lists the folders in this repository automatically, using the
   public GitHub API. New folders show up within an hour (the list is cached),
   or right away in a new browser tab.
+
+  Pages written in Markdown: a page whose <main> has data-markdown="README.md"
+  shows that file (from the same folder), converted to HTML by marked.js.
+  The first "# Heading" in the README becomes the browser tab title.
 */
 (function () {
   "use strict";
@@ -99,7 +103,9 @@
     return node;
   }
 
+  var lastNames = [];
   function renderNav(names) {
+    lastNames = names;
     var list = document.querySelector(".site-nav ul");
     if (list) {
       list.textContent = "";
@@ -159,6 +165,39 @@
     }
   }
 
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", buildHeader);
-  else buildHeader();
+  /* ---------- Markdown pages ---------- */
+  function loadMarked() {
+    return new Promise(function (resolve, reject) {
+      if (window.marked) return resolve();
+      var s = el("script", { src: new URL("marked.js", BASE).href });
+      s.onload = resolve; s.onerror = reject;
+      document.head.appendChild(s);
+    });
+  }
+
+  function renderMarkdown() {
+    var main = document.querySelector("main[data-markdown]");
+    if (!main) return;
+    var file = main.getAttribute("data-markdown") || "README.md";
+    var text = fetch(file, { cache: "no-cache" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); });
+    Promise.all([text, loadMarked()]).then(function (v) {
+      main.innerHTML = window.marked.parse(v[0]);
+      // Wide tables scroll sideways on phones instead of stretching the page.
+      Array.prototype.forEach.call(main.querySelectorAll("table"), function (t) {
+        var wrap = el("div", { class: "table-wrap" });
+        t.parentNode.insertBefore(wrap, t); wrap.appendChild(t);
+      });
+      var h1 = main.querySelector("h1");
+      if (h1) document.title = h1.textContent + (location.pathname === BASE.pathname ? "" : " · " + SITE_NAME);
+      renderNav(lastNames); // fills a section grid if the README has one
+    }).catch(function () {
+      main.innerHTML = '<h1>Nothing here yet</h1><p class="lead">This folder doesn\'t have a README.md yet.</p>';
+    });
+  }
+
+  function start() { buildHeader(); renderMarkdown(); }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
+  else start();
 })();

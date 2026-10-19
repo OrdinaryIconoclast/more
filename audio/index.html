@@ -1,32 +1,26 @@
 <!doctype html>
+<!--
+  The same index.html goes in every folder of this site, unchanged.
+  It shows the README.md from its own folder, with the shared header on top.
+
+  To add a page: make a folder, copy this file into it, and add a README.md.
+  The folder appears in the navigation automatically.
+
+  The paths below start with /more/ (this repository's name), so this file
+  works in any folder. If the repository is ever renamed, update them.
+-->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>audio · more</title>
-<meta name="description" content="audio: notes and details.">
+<title>more</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰️</text></svg>">
-<link rel="stylesheet" href="../more.css">
-<script src="../more.js"></script>
+<link rel="stylesheet" href="/more/more.css">
+<script src="/more/more.js"></script>
 </head>
 <body>
-<!-- The site header and navigation are added here by more.js -->
-<main>
-
-<h1>audio</h1>
-<p class="lead">A one-line description of this section.</p>
-
-<h2>Overview</h2>
-<p>Start writing here. Formatting, image, and video examples are in the <a href="../default.html">style guide</a>.</p>
-
-<!-- When this section's code repository exists, delete this line and the one below the link.
-<p><a class="btn" href="https://github.com/OrdinaryIconoclast/audio">View the code on GitHub →</a></p>
--->
-
-<footer>
-  <p><a href="#">Back to top ↑</a></p>
-</footer>
-
+<main data-markdown="README.md">
+  <noscript><p>This page needs JavaScript to display. You can read it <a href="README.md">as plain text</a>.</p></noscript>
 </main>
 </body>
 </html>
